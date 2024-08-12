@@ -3,13 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles/fontawesome.css" />
+    <link rel="stylesheet" href="./assets/styles/global.css" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
     <title>ohmyfood</title>
   </head>
   <body>
+    <header class="header">
+      <div class="header__backbutton">
+        <a href="/">
+          <!-- <FontAwesomeIcon
+                      icon={faArrowLeft}
+                      class=header__backbutton_icon
+                  /> -->
+        </a>
+      </div>
+      <div class="header__logo">
+        <img src="./assets/images/logo/ohmyfood@2x.svg" alt="ohmyfood logo" />
+      </div>
+      <div></div>
+    </header>
     <main>
       <div class="place">
-        <p>faMapMarkerAlt</p>
         <p>
           <strong>Paris, Belleville</strong>
         </p>
@@ -17,7 +38,7 @@
       <section class="textHero">
         <h2>Réservez le menu qui vous convient</h2>
         <p>
-          Découvrez des restaurants d{`'`}exception, sélectionnés par nos soins.
+          Découvrez des restaurants d'exception, sélectionnés par nos soins.
         </p>
         <button class="buttonStyled">Explorer nos restaurants</button>
       </section>
@@ -27,11 +48,25 @@
         <div class="wrapper">
           <h2>Fonctionnement</h2>
           <div class="fonctionnement__box">
-            <div class="fonctionnement__box_case}">
-              <div class="purpleDot">doNumber</div>
+            <div class="fonctionnement__box_case">
+              <div class="purpleDot">1</div>
               <div class="fonctionnement__box_case_content">
-                <img src="icon" alt="icon" />
-                <p>item.text</p>
+                <img src="./assets/images/icons/mobile.svg" alt="icon" />
+                <p>Choisissez un restaurant</p>
+              </div>
+            </div>
+            <div class="fonctionnement__box_case">
+              <div class="purpleDot">2</div>
+              <div class="fonctionnement__box_case_content">
+                <img src="./assets/images/icons/list.svg" alt="icon" />
+                <p>Composez votre menu</p>
+              </div>
+            </div>
+            <div class="fonctionnement__box_case">
+              <div class="purpleDot">3</div>
+              <div class="fonctionnement__box_case_content">
+                <img src="./assets/images/icons/market.svg" alt="icon" />
+                <p>Dégustez au restaurant</p>
               </div>
             </div>
           </div>
@@ -40,79 +75,189 @@
 
       <!-- <RestaurantCards /> -->
 
-      <section className={styles.restaurantSection}>
+      <section class="restaurantSection">
+        <div class="wrapper">
+          <h2>Restaurants</h2>
+          <div class="restaurantSection__cardsBox">
+            <div>
+              <div class="restaurantSection__cardsBox_card">
+                <a href="#" class="textNormalzation">
+                  <div class="picture">
+                    <img
+                      src="./assets/images/photos/la-palette-du-gout.jpg"
+                      alt=""
+                      class="restaurantSection__cardsBox_card_img"
+                    />
+                    <div class="new">Nouveau</div>
+                  </div>
+                </a>
 
-        <div className={styles.wrapper}>
-            <h2>Restaurants</h2>
-            <div className={styles.restaurantSection__cardsBox}>
-               
-                    <div key={restaurant.id}>
-                        <div className={styles.restaurantSection__cardsBox_card}>
-                            <Link href={`/restaurants/${restaurant.id}`} className={styles.textNormalzation}>
+                <div class="restaurantSection__cardsBox_card_content">
+                  <div>
+                    <a href="#" class="textNormalzation">
+                      <h3 class="textNormalzation">La palette du goût</h3>
+                    </a>
+                    <p class="textNormalzation">Ménilmontant</p>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="heart-1" class="heartCheckbox" />
+                    <label for="heart-1" class="heartIcon">
+                      <img
+                        src="./assets/images/icons/heart.svg"
+                        alt="heart icon"
+                        class="heartIconRegular"
+                      />
 
-                                <div className={styles.picture}>
-                                    <Image
-                                        src={`/images/restaurants/${restaurant.image}`}
-                                        alt={restaurant.name}
-                                        width={400}
-                                        height={300}
-                                        className={styles.restaurantSection__cardsBox_card_img}
-                                    />
-                                    {restaurant.new && <div className={styles.new}>
-                                        Nouveau
-                                    </div>}
-
-
-                                </div>
-                            </Link>
-
-                            <div className={styles.restaurantSection__cardsBox_card_content}>
-                                <div>
-                                    <Link href={`/restaurants/${restaurant.id}`} className={styles.textNormalzation}>
-                                        <h3 className={styles.textNormalzation}>{restaurant.name}</h3>
-                                    </Link>
-                                    <p className={styles.textNormalzation}>{restaurant.lieu}</p>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id={`heart-${restaurant.id}`} className={styles.heartCheckbox} />
-                                    <label htmlFor={`heart-${restaurant.id}`} className={styles.heartIcon}>
-                                        {/* <FontAwesomeIcon
-                                            icon={farHeart}
-                                            className={styles.heartIconRegular}
-                                        />
-                                        <FontAwesomeIcon
-                                            icon={fasHeart}
-                                            className={styles.heartIconSolid}
-                                        /> */}
-                                        <Image src="/images/icons/heart.svg" alt="heart icon" className={styles.heartIconRegular} width={20} height={20} />
-
-                                        <Image src="/images/icons/heartFull.svg" alt="heart full icon" className={styles.heartIconSolid} width={20} height={20} />
-
-                                        {/*make gradient but it's not working --solve the problem by copying svg*/}
-                                        {/* <FontAwesomeIcon
-                                            icon={fasHeart}
-                                            style={{
-                                                color: 'transparent',
-                                                backgroundClip: 'text',
-                                                backgroundImage: 'linear-gradient(to right, #ff0000, #ffff00, #00ff00)',
-                                            }}
-                                            className={styles.heartIconSolid}
-                                        /> */}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                
+                      <img
+                        src="./assets/images/icons/heartFull.svg"
+                        alt="heart full icon"
+                        class="heartIconSolid"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div>
+              <div class="restaurantSection__cardsBox_card">
+                <a href="#" class="textNormalzation">
+                  <div class="picture">
+                    <img
+                      src="./assets/images/photos/la-note-enchantee.jpg"
+                      alt=""
+                      class="restaurantSection__cardsBox_card_img"
+                    />
+                    <div class="new">Nouveau</div>
+                  </div>
+                </a>
 
+                <div class="restaurantSection__cardsBox_card_content">
+                  <div>
+                    <a href="#" class="textNormalzation">
+                      <h3 class="textNormalzation">La note enchantée</h3>
+                    </a>
+                    <p class="textNormalzation">Charonne</p>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="heart-2" class="heartCheckbox" />
+                    <label for="heart-2" class="heartIcon">
+                      <img
+                        src="./assets/images/icons/heart.svg"
+                        alt="heart icon"
+                        class="heartIconRegular"
+                      />
 
+                      <img
+                        src="./assets/images/icons/heartFull.svg"
+                        alt="heart full icon"
+                        class="heartIconSolid"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="restaurantSection__cardsBox_card">
+                <a href="#" class="textNormalzation">
+                  <div class="picture">
+                    <img
+                      src="./assets/images/photos/a-la-francaise.jpg"
+                      alt=""
+                      class="restaurantSection__cardsBox_card_img"
+                    />
+                  </div>
+                </a>
 
+                <div class="restaurantSection__cardsBox_card_content">
+                  <div>
+                    <a href="#" class="textNormalzation">
+                      <h3 class="textNormalzation">À la française</h3>
+                    </a>
+                    <p class="textNormalzation">Cité Route</p>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="heart-3" class="heartCheckbox" />
+                    <label for="heart-3" class="heartIcon">
+                      <img
+                        src="./assets/images/icons/heart.svg"
+                        alt="heart icon"
+                        class="heartIconRegular"
+                      />
+
+                      <img
+                        src="./assets/images/icons/heartFull.svg"
+                        alt="heart full icon"
+                        class="heartIconSolid"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="restaurantSection__cardsBox_card">
+                <a href="#" class="textNormalzation">
+                  <div class="picture">
+                    <img
+                      src="./assets/images/photos/le-delice-des-sens.jpg"
+                      alt=""
+                      class="restaurantSection__cardsBox_card_img"
+                    />
+                  </div>
+                </a>
+
+                <div class="restaurantSection__cardsBox_card_content">
+                  <div>
+                    <a href="#" class="textNormalzation">
+                      <h3 class="textNormalzation">Le délice des sens</h3>
+                    </a>
+                    <p class="textNormalzation">Folie-Méricourt</p>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="heart-4" class="heartCheckbox" />
+                    <label for="heart-4" class="heartIcon">
+                      <img
+                        src="./assets/images/icons/heart.svg"
+                        alt="heart icon"
+                        class="heartIconRegular"
+                      />
+
+                      <img
+                        src="./assets/images/icons/heartFull.svg"
+                        alt="heart full icon"
+                        class="heartIconSolid"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-    </section >
+      </section>
     </main>
   </body>
+
+  <footer class="footer">
+    <div>
+      <img
+        src="./assets/images/logo/ohmyfood@2x.svg"
+        alt="ohmyfood logo"
+        class="footer__logo"
+      />
+    </div>
+    <div class="footer__content">
+      <p>
+        <img src="./assets/images/icons/utensils.svg" alt="utensils icon" />
+        &nbsp;&nbsp;Proposer un restaurant
+      </p>
+      <p>
+        <img src="./assets/images/icons/handshake.svg" alt="handshake icon" />
+        &nbsp;&nbsp;Devenir partenaire
+      </p>
+      <p>Mentions légales</p>
+      <p>Contact</p>
+    </div>
+  </footer>
 </html>

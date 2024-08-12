@@ -1,0 +1,9 @@
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin debugBorder {
+  border: 1px solid red;
+}
