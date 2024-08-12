@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>ohmyfood</title>
+  </head>
+  <body>
+    <main>
+      <div class="place">
+        <p>faMapMarkerAlt</p>
+        <p>
+          <strong>Paris, Belleville</strong>
+        </p>
+      </div>
+      <section class="textHero">
+        <h2>Réservez le menu qui vous convient</h2>
+        <p>
+          Découvrez des restaurants d{`'`}exception, sélectionnés par nos soins.
+        </p>
+        <button class="buttonStyled">Explorer nos restaurants</button>
+      </section>
+      <!--  <Fonctionnment /> -->
+
+      <section class="fonctionnement">
+        <div class="wrapper">
+          <h2>Fonctionnement</h2>
+          <div class="fonctionnement__box">
+            <div class="fonctionnement__box_case}">
+              <div class="purpleDot">doNumber</div>
+              <div class="fonctionnement__box_case_content">
+                <img src="icon" alt="icon" />
+                <p>item.text</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <RestaurantCards /> -->
+
+      <section className={styles.restaurantSection}>
+
+        <div className={styles.wrapper}>
+            <h2>Restaurants</h2>
+            <div className={styles.restaurantSection__cardsBox}>
+               
+                    <div key={restaurant.id}>
+                        <div className={styles.restaurantSection__cardsBox_card}>
+                            <Link href={`/restaurants/${restaurant.id}`} className={styles.textNormalzation}>
+
+                                <div className={styles.picture}>
+                                    <Image
+                                        src={`/images/restaurants/${restaurant.image}`}
+                                        alt={restaurant.name}
+                                        width={400}
+                                        height={300}
+                                        className={styles.restaurantSection__cardsBox_card_img}
+                                    />
+                                    {restaurant.new && <div className={styles.new}>
+                                        Nouveau
+                                    </div>}
+
+
+                                </div>
+                            </Link>
+
+                            <div className={styles.restaurantSection__cardsBox_card_content}>
+                                <div>
+                                    <Link href={`/restaurants/${restaurant.id}`} className={styles.textNormalzation}>
+                                        <h3 className={styles.textNormalzation}>{restaurant.name}</h3>
+                                    </Link>
+                                    <p className={styles.textNormalzation}>{restaurant.lieu}</p>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id={`heart-${restaurant.id}`} className={styles.heartCheckbox} />
+                                    <label htmlFor={`heart-${restaurant.id}`} className={styles.heartIcon}>
+                                        {/* <FontAwesomeIcon
+                                            icon={farHeart}
+                                            className={styles.heartIconRegular}
+                                        />
+                                        <FontAwesomeIcon
+                                            icon={fasHeart}
+                                            className={styles.heartIconSolid}
+                                        /> */}
+                                        <Image src="/images/icons/heart.svg" alt="heart icon" className={styles.heartIconRegular} width={20} height={20} />
+
+                                        <Image src="/images/icons/heartFull.svg" alt="heart full icon" className={styles.heartIconSolid} width={20} height={20} />
+
+                                        {/*make gradient but it's not working --solve the problem by copying svg*/}
+                                        {/* <FontAwesomeIcon
+                                            icon={fasHeart}
+                                            style={{
+                                                color: 'transparent',
+                                                backgroundClip: 'text',
+                                                backgroundImage: 'linear-gradient(to right, #ff0000, #ffff00, #00ff00)',
+                                            }}
+                                            className={styles.heartIconSolid}
+                                        /> */}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                
+            </div>
+
+
+
+        </div>
+
+    </section >
+    </main>
+  </body>
+</html>
