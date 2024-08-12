@@ -1,0 +1,24 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Openclassroom project 4 ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuongshodan/oc_p3_omyfood_htmlcss.git"
+  },
+  "keywords": [
+    "html",
+    "scss",
+    "sass"
+  ],
+  "author": "Cuong Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cuongshodan/oc_p3_omyfood_htmlcss/issues"
+  },
+  "homepage": "https://github.com/cuongshodan/oc_p3_omyfood_htmlcss#readme"
+}
