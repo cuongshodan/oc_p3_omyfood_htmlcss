@@ -444,8 +444,7 @@ $color-quinary: rgba(243, 243, 243, 1);
         .slider {
           //@include debugBorder();
           border-radius: 0px 15px 15px 0px;
-          width: 0px;
-
+          width: 0;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -458,7 +457,8 @@ $color-quinary: rgba(243, 243, 243, 1);
         }
 
         &:hover .slider {
-          width: 60px;
+          width: 20px;
+          height: 20px;
           /* &__okIcon {
             display: flex;
           } */
