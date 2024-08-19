@@ -28,6 +28,7 @@ $color-quinary: rgba(243, 243, 243, 1);
     display: flex;
     justify-content: center;
     width: 70%;
+    padding: 20px;
     //@include debugBorder();
   }
 }
@@ -36,6 +37,7 @@ $color-quinary: rgba(243, 243, 243, 1);
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 15px;
   padding: 5px;
   font-size: 16px;
   background-color: rgba(234, 234, 234, 1);
@@ -45,7 +47,7 @@ $color-quinary: rgba(243, 243, 243, 1);
 
   &__mapIcon {
     width: 12px;
-    padding: 15px;
+    //@include debugBorder();
   }
 }
 
@@ -57,6 +59,10 @@ $color-quinary: rgba(243, 243, 243, 1);
   padding: 20px 50px 50px 50px;
   text-align: center;
   background: rgb(242, 236, 236);
+
+  h2 {
+    font-size: 2.5em;
+  }
 }
 
 .buttonStyled {
@@ -88,7 +94,7 @@ $color-quinary: rgba(243, 243, 243, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 35px;
     justify-content: center;
 
     @media (min-width: 1024px) {
@@ -283,11 +289,13 @@ $color-quinary: rgba(243, 243, 243, 1);
   background: rgba(53, 53, 53, 1);
   color: white;
   padding: 30px;
+
   &__logo {
     //@include debugBorder();
     width: 140px;
     height: 30px;
     margin-bottom: 10px;
+    filter: invert(1);
   }
 
   &__content {
@@ -444,7 +452,7 @@ $color-quinary: rgba(243, 243, 243, 1);
         .slider {
           //@include debugBorder();
           border-radius: 0px 15px 15px 0px;
-          width: 0;
+          width: 0px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -457,11 +465,14 @@ $color-quinary: rgba(243, 243, 243, 1);
         }
 
         &:hover .slider {
-          width: 20px;
-          height: 20px;
+          width: 80px;
+
           /* &__okIcon {
             display: flex;
           } */
+          img {
+            width: 25px;
+          }
         }
       }
     }
