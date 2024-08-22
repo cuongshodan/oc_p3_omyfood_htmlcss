@@ -30,7 +30,6 @@ $color-quinary: rgba(243, 243, 243, 1);
     justify-content: center;
     width: 70%;
     padding: 20px;
-    //@include debugBorder();
   }
 }
 
@@ -48,12 +47,10 @@ $color-quinary: rgba(243, 243, 243, 1);
 
   &__mapIcon {
     width: 12px;
-    //@include debugBorder();
   }
 }
 
 .textHero {
-  //@include debugBorder();
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,14 +81,12 @@ $color-quinary: rgba(243, 243, 243, 1);
 }
 
 .fonctionnement {
-  //@include debugBorder();
   padding: 30px 20px 50px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   &__box {
-    //@include debugBorder();
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -141,8 +136,6 @@ $color-quinary: rgba(243, 243, 243, 1);
 }
 
 .wrapper {
-  //@include debugBorder();
-  //border: green 3px solid;
   width: 100%;
   max-width: 500px;
 
@@ -159,7 +152,6 @@ $color-quinary: rgba(243, 243, 243, 1);
 
 .wrapper2 {
   @media (min-width: 1024px) {
-    //@include debugBorder();
     display: flex;
     justify-content: center;
     background-color: white;
@@ -168,7 +160,6 @@ $color-quinary: rgba(243, 243, 243, 1);
 
 .wrapper3 {
   @media (min-width: 1024px) {
-    //@include debugBorder();
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -178,13 +169,11 @@ $color-quinary: rgba(243, 243, 243, 1);
 
 .wrapper4 {
   @media (min-width: 1024px) {
-    //@include debugBorder();
     background: rgb(242, 236, 236);
   }
 }
 
 .restaurantSection {
-  //@include debugBorder();
   background: rgb(242, 236, 236);
   padding: 30px 10px 50px 10px;
   display: flex;
@@ -204,7 +193,6 @@ $color-quinary: rgba(243, 243, 243, 1);
       }
     }
     @media (min-width: 1024px) {
-      // @include debugBorder();
       display: flex;
       box-sizing: border-box;
       flex-wrap: wrap;
@@ -213,7 +201,6 @@ $color-quinary: rgba(243, 243, 243, 1);
       gap: 30px;
     }
     &_card {
-      //@include debugBorder();
       border-radius: 20px;
       margin: 20px 0px 20px 0px;
       overflow: hidden;
@@ -225,14 +212,12 @@ $color-quinary: rgba(243, 243, 243, 1);
       }
 
       &_img {
-        //@include debugBorder();
         object-fit: cover;
         width: 100%;
         height: 160px;
         margin-bottom: -5px;
       }
       &_content {
-        //@include debugBorder();
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -286,13 +271,11 @@ $color-quinary: rgba(243, 243, 243, 1);
 /* ************************************ */
 
 .footer {
-  //@include debugBorder();
   background: rgba(53, 53, 53, 1);
   color: white;
   padding: 30px;
 
   &__logo {
-    //@include debugBorder();
     width: 140px;
     height: 30px;
     margin-bottom: 10px;
@@ -300,7 +283,6 @@ $color-quinary: rgba(243, 243, 243, 1);
   }
 
   &__content {
-    //@include debugBorder();
     p {
       display: flex;
       align-items: center;
@@ -365,7 +347,6 @@ $color-quinary: rgba(243, 243, 243, 1);
   }
 
   &__title {
-    //@include debugBorder();
     font-family: "Shrikhand", serif;
     display: flex;
     align-items: center;
@@ -384,7 +365,6 @@ $color-quinary: rgba(243, 243, 243, 1);
   }
 
   &__menu {
-    //@include debugBorder();
     padding: 20px 20px 0px 20px;
     position: relative;
     background: rgb(242, 236, 236);
@@ -400,14 +380,12 @@ $color-quinary: rgba(243, 243, 243, 1);
     }
 
     section {
-      //@include debugBorder();
       @media (min-width: 1024px) {
         width: 600px;
       }
     }
 
     &_box {
-      //@include debugBorder();
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -415,7 +393,6 @@ $color-quinary: rgba(243, 243, 243, 1);
       gap: 20px;
       margin-bottom: 30px;
       &_case {
-        //@include debugBorder();
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -431,12 +408,10 @@ $color-quinary: rgba(243, 243, 243, 1);
           margin: 15px;
           width: 100%;
           h3 {
-            //@include debugBorder();
             margin: 0px;
             padding: 0 0 5px 0;
           }
           div {
-            //@include debugBorder();
             display: flex;
             justify-content: space-between;
             margin: 0;
@@ -444,7 +419,6 @@ $color-quinary: rgba(243, 243, 243, 1);
             position: relative;
 
             p {
-              //@include debugBorder();
               margin: 0;
               padding: 0;
             }
@@ -452,7 +426,6 @@ $color-quinary: rgba(243, 243, 243, 1);
         }
 
         .slider {
-          //@include debugBorder();
           border-radius: 0px 15px 15px 0px;
           width: 0px;
           display: flex;
