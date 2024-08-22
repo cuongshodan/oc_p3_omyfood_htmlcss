@@ -1,0 +1,37 @@
+.wrapper {
+  width: 100%;
+  max-width: 500px;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    max-width: 100%;
+  }
+  h2 {
+    padding-left: 10px;
+  }
+}
+
+.wrapper2 {
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+  }
+}
+
+.wrapper3 {
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.wrapper4 {
+  @media (min-width: 1024px) {
+    background: rgb(242, 236, 236);
+  }
+}

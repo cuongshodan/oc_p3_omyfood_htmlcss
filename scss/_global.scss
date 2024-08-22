@@ -9,6 +9,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Roboto", sans-serif;
+  font-size: 16px;
 
   @media (min-width: 1024px) {
     transform: scale(1.3); // Adjust the scale factor as needed
@@ -22,3 +23,46 @@ body {
     height: calc(100% / 1.7); // Inverse of the scale factor
   }
 }
+
+.textNormalzation {
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+}
+
+.centerItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textBold {
+  font-weight: bold;
+}
+
+.marginTB {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.marginB {
+  margin-bottom: 30px;
+}
+
+.decoUnderline {
+  border-bottom: 3px solid rgb(138, 232, 208);
+  padding-bottom: 8px;
+}
+
+//example
+
+/* .title {
+  color: $color-primary;
+  a {
+    background-color: green;
+  }
+  @include mobile() {
+    background-color: rgb(224, 214, 214);
+  }
+}
+ */
