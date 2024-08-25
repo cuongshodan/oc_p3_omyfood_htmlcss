@@ -2,7 +2,7 @@
   "name": "ohmyfood",
   "version": "1.0.0",
   "description": "Openclassroom project 4 ohmyfood",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch scss:assets/styles --style compressed"
